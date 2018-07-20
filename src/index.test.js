@@ -1,5 +1,5 @@
 import {expect} from 'chai'
-import breakingBadNames from '.'
+import breakingBadNames from './index.js';
 
 describe('breakingBad-names', () => {
   it('should have a list of all available names', () => {
