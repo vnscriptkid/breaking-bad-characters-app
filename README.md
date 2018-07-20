@@ -1,3 +1,3 @@
-# starwars-names
+# breaking-bad-names
 
-For all your random Star Wars character needs
+For all your random Breaking Bad character needs
