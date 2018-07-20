@@ -7,14 +7,17 @@ describe('breakingBad-names', () => {
   })
 
   it('should allow me to get a random name from the list', () => {
-    expect(breakingBadNames.random()).to.satisfy(isIncludedIn(breakingBadNames.all))
+    // expect(breakingBadNames.random()).to.satisfy(isIncludedIn(breakingBadNames.all))
+    const result = breakingBadNames.random();
+    expect(breakingBadNames.all).to.include(result);
+    expect(result).to.be.a('string');
   })
 })
 
 function isArrayOfStrings(array) {
-  return array.every(i => typeof i === 'string')
+  return Array.isArray(array) && array.every(i => typeof i === 'string')
 }
 
-function isIncludedIn(array) {
-  return item => array.includes(item)
-}
+// function isIncludedIn(array) {
+//   return item => array.includes(item)
+// }
